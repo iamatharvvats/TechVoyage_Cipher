@@ -1,0 +1,106 @@
+.App {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background-color: white; /* Sky Blue background representing the ocean */
+  overflow-y: scroll;
+}
+
+.App-header {
+  background-color: rgb(64, 112, 201); /* Dodger Blue header background */
+  padding: 20px;
+  color: #fff; /* White text color */
+  font-size: 2rem;
+}
+
+.Island-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.Ship {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px; /* Adjust the width as needed */
+  height: auto;
+  z-index: 1; /* Ensure the ship is above the islands */
+}
+
+.Island {
+  position: relative;
+  margin: 10px;
+  background-color: #f0e68c; /* Khaki island background */
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #888; /* Light shadow for a subtle lifted effect */
+  cursor: pointer;
+  width: 30%; /* Set the width to 30% to match the ship size */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.Island:hover {
+  transform: scale(1.05); /* Scale up the island on hover */
+}
+
+.Island img {
+  width: 100%; /* Make the image fill the container */
+  height: auto;
+  border-radius: 5px; /* Rounded corners for the island images */
+}
+
+.Lock-button-container {
+  position: relative;
+}
+
+.Lock-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: #ff0000; /* Red locked button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Lock-button.unlocked {
+  background-color: #00ff00; /* Green unlocked button */
+}
+
+.Island-message {
+  text-align: center;
+  margin-top: 10px;
+  color: #228b22; /* Darker Sea Green color for the message */
+  font-weight: bold;
+}
+
+.Island-heading {
+  margin-top: 10px;
+}
+
+.Answer-container {
+  margin-top: 10px;
+}
+
+input {
+  padding: 5px;
+  margin-right: 5px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #2e8b57; /* Sea Green submit button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #228b22; /* Darker Sea Green on hover */
+}
