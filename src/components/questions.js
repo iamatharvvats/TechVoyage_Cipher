@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import './questions.css';
 
 const islandImages = Array.from({ length: 25 }, (_, i) => i + 1);
@@ -21,7 +21,6 @@ function Questions() {
     setUnlockedIsland((prevUnlocked) => prevUnlocked + 1);
   };
 
-  useEffect(() => [unlockedIsland]);
 
   return (
     <div className="App">
