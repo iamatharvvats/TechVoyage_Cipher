@@ -1,0 +1,106 @@
+.App {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background-color: white; 
+  overflow-y: scroll;
+}
+
+.App-header {
+  background-color: rgb(64, 112, 201); 
+  padding: 20px;
+  color: #fff; 
+  font-size: 2rem;
+}
+
+.Island-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.Ship {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px; 
+  height: auto;
+  z-index: 1; 
+}
+
+.Island {
+  position: relative;
+  margin: 10px;
+  background-color: #f0e68c; 
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #888; 
+  cursor: pointer;
+  width: 30%; 
+  box-sizing: border-box; 
+}
+
+.Island:hover {
+  transform: scale(1.05); 
+}
+
+.Island img {
+  width: 100%; 
+  height: auto;
+  border-radius: 5px; 
+}
+
+.Lock-button-container {
+  position: relative;
+}
+
+.Lock-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: #ff0000; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Lock-button.unlocked {
+  background-color: #00ff00; 
+}
+
+.Island-message {
+  text-align: center;
+  margin-top: 10px;
+  color: #228b22;
+  font-weight: bold;
+}
+
+.Island-heading {
+  margin-top: 10px;
+}
+
+.Answer-container {
+  margin-top: 10px;
+}
+
+input {
+  padding: 5px;
+  margin-right: 5px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #2e8b57; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #228b22; 
+}
