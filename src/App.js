@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import Navbar from './Components/Navbar/Navbar';
 
 const islandImages = Array.from({ length: 25 }, (_, i) => i + 1);
 
@@ -29,7 +30,9 @@ const App = () => {
   }, [unlockedIsland]);
 
   return (
+    <>
     <div className="App">
+      <Navbar/>
       <header className="App-header">
         <h1>QUESTIONS</h1>
       </header>
@@ -43,16 +46,16 @@ const App = () => {
         />
         {islandImages.map((islandNumber) => (
           <div
-            key={islandNumber}
-            className={`Island ${islandNumber <= unlockedIsland ? 'unlocked' : 'locked'}`}
-            onMouseOver={() => setShipPosition((islandNumber - 1) * 30)}
+          key={islandNumber}
+          className={`Island ${islandNumber <= unlockedIsland ? 'unlocked' : 'locked'}`}
+          onMouseOver={() => setShipPosition((islandNumber - 1) * 30)}
           >
             <a
               href={islandNumber <= unlockedIsland && !completedIslands.includes(islandNumber) ? '#' : undefined}
               onClick={(e) => openQuestion(islandNumber, e)}
               target="_blank"
               rel="noopener noreferrer"
-            >
+              >
               <img src="/islands.png" alt={`Island ${islandNumber}`} className="Island-img" />
             </a>
             <div className="Lock-button-container">
@@ -66,8 +69,8 @@ const App = () => {
             </div>
             {completedIslands.includes(islandNumber) ? (
               <p className="Island-message">Task submitted!</p>
-            ) : (
-              <>
+              ) : (
+                <>
                 <div className="Island-heading">
                   <h3>ISLAND {islandNumber}</h3>
                 </div>
@@ -85,6 +88,7 @@ const App = () => {
         ))}
       </div>
     </div>
+  </>
   );
 };
 

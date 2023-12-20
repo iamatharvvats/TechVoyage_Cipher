@@ -1,0 +1,44 @@
+/* Navbar.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Kdam+Thmor+Pro&family=Martel+Sans&family=Open+Sans:wght@300&family=Poppins:wght@300&family=Roboto:wght@500&family=Ubuntu&display=swap');
+
+.navbar {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    font-family: 'Poppins', Courier, monospace;
+    /* border: 2px solid; */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align items on smaller screens */
+}
+
+.navbarHeader {
+    /* margin-right: 20px; */
+}
+
+.navbarNav {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+.navItem {
+    /* margin-right: 15px;  */
+}
+
+.navLink {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navLink:hover {
+    color: #646161;
+}
+
