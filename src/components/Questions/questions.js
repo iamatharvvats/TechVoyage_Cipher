@@ -1,6 +1,6 @@
 import React, { useState} from 'react';
 import './questions.css';
-
+import Navbar from 'C:/Users/ATHARV VATS/questions/src/components/Navbar/Navbar';
 const islandImages = Array.from({ length: 25 }, (_, i) => i + 1);
 
 function Questions() {
@@ -24,6 +24,7 @@ function Questions() {
 
   return (
     <div className="App">
+      <Navbar />
       <header className="App-header">
         <h1>QUESTIONS</h1>
       </header>

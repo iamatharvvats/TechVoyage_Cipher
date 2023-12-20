@@ -34,7 +34,10 @@ export default App;*/
 // src/App.js
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
-import Questions from './components/questions';
+import Questions from './components/Questions/questions';
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
+import Leaderboard from './components/Leaderboard/Leaderboard';
 import './App.css';
 
 function ContestPage() {
@@ -56,6 +59,7 @@ function ContestPage() {
 
   return (
     <div className="app-container">
+      <Navbar />
       <div className="login-container">
         <h2>TECH VOYAGE 2023</h2>
         <h1>
@@ -91,8 +95,8 @@ function ContestPage() {
             ENTER THE CONTEST
           </button>
         </form>
-      </div>
-    </div>
+        </div>
+        <Footer /></div>
   );
 }
 
@@ -102,6 +106,7 @@ function App() {
       <Routes>
         <Route path="/" element={<ContestPage />} />
         <Route path="/questions" element={<Questions />} />
+        <Route path="/leaderboard" element={<Leaderboard />} /> {/* Route for Leaderboard */}
       </Routes>
     </Router>
   );

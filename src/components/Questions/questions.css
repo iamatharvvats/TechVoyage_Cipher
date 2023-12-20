@@ -75,12 +75,14 @@
 .Island-message {
   text-align: left;
   margin-top: 10px;
-  color: #228b22;
+  color: #2d228b;
   font-weight: bold;
 }
 
 .Island-heading {
   margin-top: 10px;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
 }
 
 .Answer-container {
