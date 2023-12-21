@@ -18,6 +18,7 @@
 }
 
 .table th {
+    color:whitesmoke;
     border-bottom: 2px solid #000; /* Bold line below table headings */
 }
 
@@ -30,6 +31,7 @@
 
 /* Adjust styles for "No items to display" message */
 .table td[colSpan="3"] {
+    color:whitesmoke;
     text-align: center;
     font-style: italic;
 }

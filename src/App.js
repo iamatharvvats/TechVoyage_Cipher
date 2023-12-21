@@ -27,6 +27,43 @@ function App() {
     </Router>
   );
 }
+/*<div className="login-container">
+        <h2>TECH VOYAGE 2023</h2>
+        <h1>
+          <span className="highlight">CODEQUEST CHRONICLES CONTEST</span>
+        </h1>
+        <p>WELCOME!! LET THE BATTLE BEGIN.</p>
+        <form>
+          <input
+            type="text"
+            placeholder="Team Name"
+            value={teamName}
+            onChange={(e) => setTeamName(e.target.value)}
+            required
+          />
+          <br />
+          <input
+            type="text"
+            placeholder="Team Leader Name"
+            value={teamLeaderName}
+            onChange={(e) => setTeamLeaderName(e.target.value)}
+            required
+          />
+          <br />
+          <input
+            type="text"
+            placeholder="Team Leader ID"
+            value={teamLeaderID}
+            onChange={(e) => setTeamLeaderID(e.target.value)}
+            required
+          />
+          <br />
+          <button type="button" onClick={handleButtonClick}>
+            ENTER THE CONTEST
+          </button>
+        </form>
+        </div>
+        <Footer />
 
 export default App;*/
 // src/App.js
@@ -38,6 +75,7 @@ import Questions from './components/Questions/questions';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Leaderboard from './components/Leaderboard/Leaderboard';
+import About from './components/About/About'
 import './App.css';
 
 function ContestPage() {
@@ -96,7 +134,8 @@ function ContestPage() {
           </button>
         </form>
         </div>
-        <Footer /></div>
+        <Footer />
+      </div>
   );
 }
 
