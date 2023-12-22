@@ -1,4 +1,4 @@
-/* Navbar.css */
+/* Navbar.css 
 
 @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Kdam+Thmor+Pro&family=Martel+Sans&family=Open+Sans:wght@300&family=Poppins:wght@300&family=Roboto:wght@500&family=Ubuntu&display=swap');
 
@@ -6,13 +6,12 @@
     background-color: #ffffff;
     padding: 10px 20px;
     font-family: 'Poppins', Courier, monospace;
-    /* border: 2px solid; */
 }
 
 .container {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Align items on smaller screens */
+    justify-content: space-between; 
 }
 
 .navbarNav {
@@ -33,4 +32,39 @@
 
 .navLink:hover {
     color: #646161;
-}
+}*/
+/* Navbar.css */
+
+/* styles.css */
+
+/* Navbar */
+.navbar {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    font-family: 'Poppins', Courier, monospace;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbarNav {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+  }
+  
+  .navLink {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .navLink:hover {
+    color: #646161;
+  }

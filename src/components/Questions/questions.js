@@ -60,7 +60,7 @@ function Questions() {
                 </div>
                 {islandNumber <= unlockedIsland && (
                   <div className="Answer-container">
-                    <input type="text" placeholder="Your answer" />
+                    <input type="text" placeholder="Your answer" /><br></br>
                     <button onClick={() => submitAnswer(islandNumber)} disabled={islandNumber !== unlockedIsland}>
                       Submit
                     </button>
