@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import Navbar from 'C:/Users/ATHARV VATS/questions/src/components/Navbar/Navbar';
+import Navbar from "../Navbar/Navbar"
 import styles from "./Leaderboard.module.css";
+import { supabase } from '../../createClient'; 
 
 function ProductTable({ teamlists }) {
     return (
@@ -22,9 +23,9 @@ function ProductTable({ teamlists }) {
                     </tr>
                 ) : (
                     teamlists.map((team, index) => (
-                        <tr key={team.sno}>
+                        <tr key={team.id}>
                             <td>{index + 1}</td>
-                            <td>{team.name}</td>
+                            <td>{team.teamname}</td>
                             <td>{team.points}</td>
                         </tr>
                     ))
@@ -43,26 +44,31 @@ function Leaderboard() {
 
     useEffect(() => {
         const fetchData = async () => {
-            try {
-                const response = await fetch('http://localhost:5000/teamlists');
-                const data = await response.json();
-                setTeamlist(data);
-            } catch (error) {
-                console.error('Error fetching data:', error);
+          try {
+            // console.log('Before Supabase Query');
+            const { data, error } = await supabase.from('leaderboard').select('id, teamname, points');
+            // console.log('After Supabase Query', data, error);
+            if (error) {
+              console.error('Error fetching data:', error);
+            } else {
+            //   console.log('Fetched data:', data);
+              const sortedTeams = [...data].sort((a, b) => b.points - a.points);
+              setTeamlist(sortedTeams);
             }
+          } catch (error) {
+            console.error('Error fetching data:', error);
+          }
         };
-
+    
         fetchData();
-    }, []);
-
-    const sortedTeams = [...teamlist].sort((a, b) => b.points - a.points);
+      }, []);
 
     return (
         <>
         <Navbar />
             <div className={styles.container}>
                 <h2 className={styles.heading}>LeaderBoard</h2>
-                <ProductTable teamlists={sortedTeams} />
+                <ProductTable teamlists={teamlist} />
             </div>
         </>
     );

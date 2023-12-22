@@ -1,0 +1,21 @@
+/* Rules.module.css */
+.rules {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .rules h2 {
+    color: #333;
+  }
+  
+  .rules ol {
+    color: #666;
+    line-height: 1.6;
+    margin-left: 20px;
+  }
+  
+  .rules li {
+    margin-bottom: 10px;
+  }
+  
