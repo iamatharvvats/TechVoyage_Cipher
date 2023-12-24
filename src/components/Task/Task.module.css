@@ -1,0 +1,22 @@
+/* styles/QuestionDetails.module.css */
+
+
+.QuestionDetails {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .QuestionDetails h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .QuestionDetails p {
+    font-size: 18px;
+    color: #0f0f0f;
+    line-height: 1.5;
+  }
+  
+  /* Add more styling as needed */
+  

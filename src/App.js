@@ -72,11 +72,11 @@ export default App;*/
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import Questions from './components/Questions/questions';
-import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Leaderboard from './components/Leaderboard/Leaderboard';
 import About from './components/About/About';
 import Rules from './components/Rules/Rules';
+import Task from './components/Task/Task'
 import styles from './App.module.css';
 import { supabase } from './createClient';
 
@@ -102,7 +102,10 @@ function ContestPage() {
         // Handle the error as needed
       } else if (data && data.length > 0) {
         // Entry exists, navigate to the Questions page
-        const teamId = data[0].id; // Assuming the id is stored in the 'id' column
+        const teamId = btoa(data[0].leader_id); // Assuming the id is stored in the 'id' column
+        let uri = `/questions/${teamId}`;
+        uri=encodeURI(uri)
+        console.log(uri)
         navigate(`/questions/${teamId}`);
       } else {
         // Entry does not exist, insert into leaderboard and navigate to Questions page
@@ -118,7 +121,6 @@ function ContestPage() {
 
   return (
     <div className={styles['app-container']}>
-      <Navbar />
       <div className={styles['login-container']}>
         <h2>TECH VOYAGE 2023</h2>
         <h1>
@@ -166,9 +168,10 @@ function App() {
       <Routes>
         <Route path="/" element={<ContestPage />} />
         <Route path="/questions/:userId" element={<Questions/>}/>
-        <Route path="/leaderboard" element={<Leaderboard />} /> {/* Route for Leaderboard */}
-        <Route path="/about" element={<About />} /> {/* Route for About */}
-        <Route path="/rules" element={<Rules />} /> {/* Route for Rules */}
+        <Route path="/question/:islandNumber" element={<Task/>} />
+        <Route path="/questions/:userId/leaderboard" element={<Leaderboard />} /> {/* Route for Leaderboard */}
+        <Route path="/questions/:userId/about" element={<About />} /> {/* Route for About */}
+        <Route path="/questions/:userId/rules" element={<Rules />} /> {/* Route for Rules */}
       </Routes>
     </Router>
   );

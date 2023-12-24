@@ -9,6 +9,8 @@ const islandImages = Array.from({ length: 25 }, (_, i) => i + 1);
 
 function Questions() {
   let { userId } = useParams();
+  userId=atob(userId);
+  console.log(userId)
   const [userAnswer, setUserAnswer] = useState('');
   const [unlockedIsland, setUnlockedIsland] = useState(1);
   const [completedIslands, setCompletedIslands] = useState([]);
@@ -20,8 +22,8 @@ function Questions() {
     try {
       const { data, error } = await supabase
         .from('leaderboard')
-        .select('id,points')
-        .eq('id', userId)
+        .select('leader_id,points')
+        .eq('leader_id', userId)
 
       console.log(data[0].points)
 
@@ -40,8 +42,8 @@ function Questions() {
     try {
       const { data, error } = await supabase
         .from('leaderboard')
-        .select('id,unlocked_island')
-        .eq('id', userId)
+        .select('leader_id,unlocked_island')
+        .eq('leader_id', userId)
 
       console.log("Unlocked Island:" + data[0].unlocked_island)
 
@@ -60,8 +62,8 @@ function Questions() {
     try {
       const { data, error } = await supabase
         .from('leaderboard')
-        .select('id,completed_islands')
-        .eq('id', userId)
+        .select('leader_id,completed_islands')
+        .eq('leader_id', userId)
 
       console.log("Completed islands:" + data[0].completed_islands)
 
@@ -87,7 +89,7 @@ function Questions() {
     e.preventDefault();
 
     if (islandNumber <= unlockedIsland && !completedIslands.includes(islandNumber)) {
-      const questionUrl = `https://example.com/question/${islandNumber}`;
+      const questionUrl = `/question/${islandNumber}`;
       window.open(questionUrl, '_blank');
     }
   };
@@ -126,7 +128,7 @@ function Questions() {
             unlocked_island: unlockedIsland + 1,
             completed_islands: [...completedIslands, islandNumber],
           })
-          .eq('id', userId);
+          .eq('leader_id', userId);
       } catch (updateError) {
         console.error('Error updating database:', updateError);
       }
@@ -196,3 +198,6 @@ function Questions() {
 };
 
 export default Questions;
+
+
+
