@@ -7,6 +7,10 @@ const Rules = () => {
     return (
         <>
             <Navbar />
+            <div className={styles.ocean}>
+                <div className={styles.wave}></div>
+                <div className={`${styles.wave} ${styles.wave2}`}></div>
+            </div>
             <div className={styles.rules}>
                 <h2>Rules and Regulations</h2>
                 <ol>

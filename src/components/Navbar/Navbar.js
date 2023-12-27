@@ -9,36 +9,74 @@ export default function Navbar() {
         <>
             <nav className={styles.navbar}>
                 <div className={styles.container}>
-                    <Link className={styles.navbarHeader} to={`/questions/${userId}`}>
-                        <img src={Image} alt="logo" width="50" />
-                    </Link>
+                {userId !== undefined ? (
+                                    <Link className={styles.navLink} to={`/questions/${userId}`}>
+                                        <img src={Image} alt="logo" width="50" />
+                                    </Link>
+
+                                ) : (
+                                    <Link className={styles.navLink} to="/">
+                                        <img src={Image} alt="logo" width="50" />
+                                    </Link>
+                                )}
                     <div className={styles.navbarCollapse} id="navbarSupportedContent">
                         <ul className={styles.navbarNav}>
-                        <li className={styles.navItem}>
-                                <Link className={styles.navLink} to={`/questions/${userId}`}>
-                                    Home
-                                </Link>
+                            <li className={styles.navItem}>
+                                {userId !== undefined ? (
+                                    <Link className={styles.navLink} to={`/questions/${userId}`}>
+                                        Home
+                                    </Link>
+
+                                ) : (
+                                    <Link className={styles.navLink} to="/">
+                                        Home
+                                    </Link>
+                                )}
                             </li>
                             <li className={styles.navItem}>
-                                <Link className={styles.navLink} aria-current="page" to={`/questions/${userId}/about`}>
-                                    About
-                                </Link>
+                            {userId !== undefined ? (
+                                    <Link className={styles.navLink} to={`/questions/${userId}/about`}>
+                                        About
+                                    </Link>
+
+                                ) : (
+                                    <Link className={styles.navLink} to="/about">
+                                        About
+                                    </Link>
+                                )}
                             </li>
                             <li className={styles.navItem}>
-                                <Link className={styles.navLink} to={`/questions/${userId}/rules`}>
-                                    Rules and Regulation
-                                </Link>
+                            {userId !== undefined ? (
+                                    <Link className={styles.navLink} to={`/questions/${userId}/rules`}>
+                                        Rules and Regulations
+                                    </Link>
+
+                                ) : (
+                                    <Link className={styles.navLink} to="/rules">
+                                        Rules and Regulations
+                                    </Link>
+                                )}
                             </li>
                             <li className={styles.navItem}>
-                                <Link className={styles.navLink} to={`/questions/${userId}/leaderboard`}>
-                                    LeaderBoard
-                                </Link>
+                            {userId !== undefined ? (
+                                    <Link className={styles.navLink} to={`/questions/${userId}/leaderboard`}>
+                                        Leaderboard
+                                    </Link>
+
+                                ) : (
+                                    <Link className={styles.navLink} to="/leaderboard">
+                                        Leaderboard
+                                    </Link>
+                                )}
                             </li>
-                            <li className={styles.navItem}>
-                                <Link className={styles.navLink} to={`/`}>
-                                    Logout
-                                </Link>
-                            </li>
+                            {userId !== undefined ? (
+                                    <li className={styles.navItem}>
+                                    <Link className={styles.navLink} to={`/`}>
+                                        Logout
+                                    </Link>
+                                </li>
+
+                                ):(null)}
                         </ul>
                     </div>
                 </div>

@@ -66,6 +66,10 @@ function Leaderboard() {
     return (
         <>
         <Navbar />
+        <div className={styles.ocean}>
+            <div className={styles.wave}></div>
+            <div className={`${styles.wave} ${styles.wave2}`}></div>
+        </div>
             <div className={styles.container}>
                 <h2 className={styles.heading}>LeaderBoard</h2>
                 <ProductTable teamlists={teamlist} />

@@ -40,14 +40,24 @@ const QuestionDetails = () => {
   ));
 
   return (
+    <>
+    <div className={styles.ocean}>
+                <div className={styles.wave}></div>
+                <div className={`${styles.wave} ${styles.wave2}`}></div>
+            </div>
     <div className={styles.QuestionDetails}>
+      <div>
       <h2>Question {islandNumber}</h2>
+      </div>
+      <div>
       {formattedQuestion.length > 0 ? (
         <p>{formattedQuestion}</p>
-      ) : (
-        <p>Loading question...</p>
-      )}
+        ) : (
+          <p>Loading question...</p>
+          )}
+      </div>
     </div>
+    </>
   );
 };
 

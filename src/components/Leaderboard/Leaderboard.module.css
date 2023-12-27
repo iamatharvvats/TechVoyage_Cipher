@@ -1,25 +1,78 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: auto; /* Allow vertical scrolling */
+    overflow-x: hidden;
+  }
+  
+  body {
+    background: radial-gradient(rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
+  }
+  
+  .ocean {
+    height: 5%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #015871;
+    z-index: -1; /* Move the waves behind the content */
+    
+  }
+  
+  .wave {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+    position: absolute;
+    width: 6400px;
+    top: -198px;
+    left: 0;
+    height: 198px;
+    transform: translate(0, 0, 0);
+    animation: wave 7s ease infinite;
+  }
+  
+  .wave:nth-of-type(2) {
+    top: -168px;
+    animation: swell 4s ease infinite;
+    opacity: 1;
+  }
+  
+  @keyframes wave {
+    0% { margin-left: 0; }
+    100% { margin-left: -1600px; }
+  }
+  
+  @keyframes swell {
+    0%, 100% {
+      transform: translate(0, -30px);
+    }
+    50% {
+      transform: translate(0, 5px);
+    }
+  }
+
+
+
 /* Leaderboard.module.css */
 
-@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Kdam+Thmor+Pro&family=Martel+Sans&family=Open+Sans:wght@300&family=Poppins:wght@300&family=Roboto:wght@500&family=Ubuntu&display=swap');
+
 
 .table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    font-family: 'Poppins', Courier, monospace;
 }
 
 .table th,
 .table td {
-    border-top: 1px solid #0c0c0c; /* Add top border */
+    border-top: 1px solid #ecf5eb;; /* Add top border */
     padding: 8px;
     /* background-color: #f2f2f2; */
     text-align: left;
 }
 
 .table th {
-    color:black;
-    border-bottom: 2px solid #000; /* Bold line below table headings */
+    border-bottom: 2px solid #ecf5eb;; /* Bold line below table headings */
 }
 
 .container {
@@ -31,7 +84,7 @@
 
 /* Adjust styles for "No items to display" message */
 .table td[colSpan="3"] {
-    color:black;
+
     text-align: center;
     font-style: italic;
 }
@@ -40,8 +93,6 @@
 
 .heading {
     margin-bottom: 20px;
-    font-family: 'Roboto', Courier, monospace;
-    color: #000;
 }
 
 .noItems {

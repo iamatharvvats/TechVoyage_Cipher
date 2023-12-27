@@ -1,12 +1,10 @@
 /* Navbar.css */
 
-@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Kdam+Thmor+Pro&family=Martel+Sans&family=Open+Sans:wght@300&family=Poppins:wght@300&family=Roboto:wght@500&family=Ubuntu&display=swap');
 
 .navbar {
-    background-color: #ffffff;
+    background-color: #015871;
     padding: 10px 20px;
     font-family: 'Poppins', Courier, monospace;
-    /* border: 2px solid; */
 }
 
 .container {
@@ -25,7 +23,7 @@
 
 .navLink {
     text-decoration: none;
-    color: #000000;
+    color: #ecf5eb;
     font-weight: bold;
     font-size: 16px;
     transition: color 0.3s ease;

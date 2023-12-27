@@ -7,6 +7,10 @@ const About = () => {
   return (
     <>
       <Navbar />
+      <div className={styles.ocean}>
+        <div className={styles.wave}></div>
+        <div className={`${styles.wave} ${styles.wave2}`}></div>
+      </div>
       <div className={styles.about}>
         <h2>About TechVoyage 2023</h2>
         <p>
