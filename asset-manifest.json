@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/TechVoyage_Cipher/static/css/main.24fa2838.css",
+    "main.js": "/TechVoyage_Cipher/static/js/main.5c132581.js",
+    "static/js/289.24436294.chunk.js": "/TechVoyage_Cipher/static/js/289.24436294.chunk.js",
+    "static/js/787.831d2900.chunk.js": "/TechVoyage_Cipher/static/js/787.831d2900.chunk.js",
+    "static/media/ships.webp": "/TechVoyage_Cipher/static/media/ships.c3cd656c1a0afef71fef.webp",
+    "index.html": "/TechVoyage_Cipher/index.html",
+    "main.24fa2838.css.map": "/TechVoyage_Cipher/static/css/main.24fa2838.css.map",
+    "main.5c132581.js.map": "/TechVoyage_Cipher/static/js/main.5c132581.js.map",
+    "289.24436294.chunk.js.map": "/TechVoyage_Cipher/static/js/289.24436294.chunk.js.map",
+    "787.831d2900.chunk.js.map": "/TechVoyage_Cipher/static/js/787.831d2900.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.24fa2838.css",
+    "static/js/main.5c132581.js"
+  ]
+}
