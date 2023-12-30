@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import styles from "./Navbar.module.css";
+import styles from "./Qnavbar.module.css";
 import Image from "./logo-iet.png";
 
-export default function Navbar() {
+export default function Qnav() {
     return (
         <>
             <nav className={styles.navbar}>
@@ -13,17 +13,7 @@ export default function Navbar() {
                     <div className={styles.navbarCollapse} id="navbarSupportedContent">
                         <ul className={styles.navbarNav}>
                             <li className={styles.navItem}>
-                                <Link className={styles.navLink} aria-current="page" to="/about">
-                                    About
-                                </Link>
-                            </li>
-                            <li className={styles.navItem}>
-                                <Link className={styles.navLink} to="/rules">
-                                    Rules and Regulation
-                                </Link>
-                            </li>
-                            <li className={styles.navItem}>
-                                <Link className={styles.navLink} to="/leaderboard">
+                                <Link className={styles.navLink} to="./Leaderboard">
                                     LeaderBoard
                                 </Link>
                             </li>
@@ -31,7 +21,6 @@ export default function Navbar() {
                     </div>
                 </div>
             </nav>
-
         </>
     );
 }

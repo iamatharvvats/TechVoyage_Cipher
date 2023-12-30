@@ -1,0 +1,83 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    background: radial-gradient(rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
+  }
+  
+  .ocean {
+    height: 5%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #015871;
+    z-index: -1; /* Move the waves behind the content */
+  
+  }
+  
+  .wave {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+    position: absolute;
+    width: 6400px;
+    top: -198px;
+    left: 0;
+    height: 198px;
+    transform: translate(0, 0, 0);
+    animation: wave 7s ease infinite;
+  }
+  
+  .wave:nth-of-type(2) {
+    top: -168px;
+    animation: swell 4s ease infinite;
+    opacity: 1;
+  }
+  
+  @keyframes wave {
+    0% { margin-left: 0; }
+    100% { margin-left: -1600px; }
+  }
+  
+  @keyframes swell {
+    0%, 100% {
+      transform: translate(0, -30px);
+    }
+    50% {
+      transform: translate(0, 5px);
+    }
+  }
+  
+  
+  /* styles.css */
+  
+  .QuestionDetails {
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 20px;
+    position: relative; /* Ensure a stacking context for z-index to work */
+    z-index: 1; /* Move the content above the waves */
+    box-shadow: 2px 3px 20px black, 0 0 125px #8f5922 inset;
+    background: #fffef0;
+    font-family: 'Calligraffitti', Courier, monospace;
+    border-radius: 15px;
+  }
+  
+  .QuestionDetails h2 {
+    color: #333;
+    text-align: center;
+    font-size: 40px;
+  }
+  
+  .QuestionDetails p {
+    color: black;
+    line-height: 1.6;
+    height: auto;
+    margin: 0 auto;
+    font-size: 25px;
+  }
+  
+  
+  @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Calligraffitti&family=Kdam+Thmor+Pro&family=Martel+Sans&family=Open+Sans:wght@300&family=Pirata+One&family=Poppins:wght@300&family=Roboto:wght@500&family=Ubuntu&display=swap');
+  

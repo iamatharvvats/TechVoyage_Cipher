@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   font-family: 'Arial', sans-serif;
-  background-color: white;
+  background-color: whitesmoke;
   overflow-y: scroll;
 }
 
@@ -73,7 +73,7 @@
 .Island-message {
   text-align: left;
   margin-top: 10px;
-  color: #2d228b;
+  color: #3020e2;
   font-weight: bold;
 }
 
@@ -81,6 +81,7 @@
   margin-top: 10px;
   font-family: 'Arial', sans-serif;
   font-weight: bold;
+  color:black;
 }
 
 .Answer-container {

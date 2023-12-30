@@ -11,15 +11,16 @@
 
 .table th,
 .table td {
-    border-top: 1px solid #0c0c0c; /* Add top border */
+    border-top: 1px solid whitesmoke; /* Add top border */
     padding: 8px;
     /* background-color: #f2f2f2; */
     text-align: left;
+    color:whitesmoke;
 }
 
 .table th {
     color:whitesmoke;
-    border-bottom: 2px solid #000; /* Bold line below table headings */
+    border-bottom: 2px solid whitesmoke; /* Bold line below table headings */
 }
 
 .container {
@@ -41,6 +42,7 @@
 .heading {
     margin-bottom: 20px;
     font-family: 'Roboto', Courier, monospace;
+    color: whitesmoke;
 }
 
 .noItems {

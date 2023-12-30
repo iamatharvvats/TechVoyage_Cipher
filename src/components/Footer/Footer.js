@@ -1,14 +1,11 @@
 // src/components/Footer.js
 import React from 'react';
-import './Footer.css';
+import styles from './Footer.module.css';
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="ocean"></div>
-      <div className="shore">
-        <p className="footer-content">WELCOME TO TECHVOYAGE 2023 @IET CIPHER</p>
-      </div>
+    <footer className={styles.footer}>
+        <p className={styles.footerContent}><br></br><br></br><br></br>Copyright © 2023 All rights reserved | Made with  by TechVoyage 2023 @IET CIPHER NITK </p>
     </footer>
   );
 };

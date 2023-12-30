@@ -35,36 +35,41 @@
 }*/
 /* Navbar.css */
 
-/* styles.css */
-
-/* Navbar */
+/* style
+/* Navbar Styles */
 .navbar {
-    background-color: #ffffff;
-    padding: 10px 20px;
-    font-family: 'Poppins', Courier, monospace;
-  }
-  
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .navbarNav {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-  }
-  
-  .navLink {
-    text-decoration: none;
-    color: #000000;
-    font-weight: bold;
-    font-size: 16px;
-    transition: color 0.3s ease;
-  }
-  
-  .navLink:hover {
-    color: #646161;
-  }
+  background-color: #2c3e50; /* Updated background color */
+  padding: 15px 30px; /* Increased padding for a more spacious look */
+  font-family: 'Poppins', sans-serif; /* Updated font-family */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added subtle box shadow */
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbarNav {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* Increased gap between navbar items */
+  margin: 0;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #ecf0f1; /* Light text color */
+  font-weight: bold;
+  font-size: 18px; /* Slightly increased font size */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Added background-color transition */
+  padding: 10px 15px; /* Added padding for better click/tap target */
+  border-radius: 5px; /* Added border-radius for rounded corners */
+}
+
+.navLink:hover {
+  color: #3498db; /* Updated text color on hover */
+  background-color: #ecf0f1; /* Background color change on hover */
+  border: 2px solid #3498db; /* Added border to create a rectangle effect */
+  box-sizing: border-box; /* Include border in box sizing */
+}

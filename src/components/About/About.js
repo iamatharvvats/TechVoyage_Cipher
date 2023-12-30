@@ -1,555 +1,61 @@
-import React from "react";
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
-function About() {
-   async function loadParticles(main) {
-    await loadFull(main);
-   }
-    return(
-        <Particles 
-        id="tsparticles"
-        init={loadParticles} 
-        params={
-            {
-                autoPlay: true,
-                background: {
-                  color: {
-                    value: "#000"
-                  },
-                  image: "",
-                  position: "",
-                  repeat: "",
-                  size: "",
-                  opacity: 1
-                },
-                backgroundMask: {
-                  composite: "destination-out",
-                  cover: {
-                    color: {
-                      value: "#fff"
-                    },
-                    opacity: 1
-                  },
-                  enable: false
-                },
-                clear: true,
-                defaultThemes: {},
-                delay: 0,
-                fullScreen: {
-                  enable: true,
-                  zIndex: -1
-                },
-                detectRetina: true,
-                duration: 0,
-                fpsLimit: 120,
-                interactivity: {
-                  detectsOn: "window",
-                  events: {
-                    onClick: {
-                      enable: false,
-                      mode: []
-                    },
-                    onDiv: {
-                      selectors: [],
-                      enable: false,
-                      mode: [],
-                      type: "circle"
-                    },
-                    onHover: {
-                      enable: true,
-                      mode: "trail",
-                      parallax: {
-                        enable: false,
-                        force: 2,
-                        smooth: 10
-                      }
-                    },
-                    resize: {
-                      delay: 0.5,
-                      enable: true
-                    }
-                  },
-                  modes: {
-                    trail: {
-                      delay: 0.005,
-                      pauseOnStop: true,
-                      quantity: 5,
-                      particles: {
-                        color: {
-                          value: "#ff0000",
-                          animation: {
-                            enable: true,
-                            speed: 400,
-                            sync: true
-                          }
-                        },
-                        collisions: {
-                          enable: false
-                        },
-                        links: {
-                          enable: false
-                        },
-                        move: {
-                          outModes: {
-                            default: "destroy"
-                          },
-                          speed: 2
-                        },
-                        size: {
-                          value: {
-                            min: 1,
-                            max: 5
-                          },
-                          animation: {
-                            enable: true,
-                            speed: 5,
-                            sync: true,
-                            startValue: "min",
-                            destroy: "max"
-                          }
-                        }
-                      }
-                    },
-                    attract: {
-                      distance: 200,
-                      duration: 0.4,
-                      easing: "ease-out-quad",
-                      factor: 1,
-                      maxSpeed: 50,
-                      speed: 1
-                    },
-                    bounce: {
-                      distance: 200
-                    },
-                    bubble: {
-                      distance: 200,
-                      duration: 0.4,
-                      mix: false,
-                      divs: {
-                        distance: 200,
-                        duration: 0.4,
-                        mix: false,
-                        selectors: []
-                      }
-                    },
-                    connect: {
-                      distance: 80,
-                      links: {
-                        opacity: 0.5
-                      },
-                      radius: 60
-                    },
-                    grab: {
-                      distance: 100,
-                      links: {
-                        blink: false,
-                        consent: false,
-                        opacity: 1
-                      }
-                    },
-                    push: {
-                      default: true,
-                      groups: [],
-                      quantity: 4
-                    },
-                    remove: {
-                      quantity: 2
-                    },
-                    repulse: {
-                      distance: 200,
-                      duration: 0.4,
-                      factor: 100,
-                      speed: 1,
-                      maxSpeed: 50,
-                      easing: "ease-out-quad",
-                      divs: {
-                        distance: 200,
-                        duration: 0.4,
-                        factor: 100,
-                        speed: 1,
-                        maxSpeed: 50,
-                        easing: "ease-out-quad",
-                        selectors: []
-                      }
-                    },
-                    slow: {
-                      factor: 3,
-                      radius: 200
-                    },
-                    light: {
-                      area: {
-                        gradient: {
-                          start: {
-                            value: "#ffffff"
-                          },
-                          stop: {
-                            value: "#000000"
-                          }
-                        },
-                        radius: 1000
-                      },
-                      shadow: {
-                        color: {
-                          value: "#000000"
-                        },
-                        length: 2000
-                      }
-                    }
-                  }
-                },
-                manualParticles: [],
-                particles: {
-                  bounce: {
-                    horizontal: {
-                      value: 1
-                    },
-                    vertical: {
-                      value: 1
-                    }
-                  },
-                  collisions: {
-                    absorb: {
-                      speed: 2
-                    },
-                    bounce: {
-                      horizontal: {
-                        value: 1
-                      },
-                      vertical: {
-                        value: 1
-                      }
-                    },
-                    enable: false,
-                    maxSpeed: 50,
-                    mode: "bounce",
-                    overlap: {
-                      enable: true,
-                      retries: 0
-                    }
-                  },
-                  color: {
-                    value: "#ff0000",
-                    animation: {
-                      h: {
-                        count: 0,
-                        enable: true,
-                        speed: 50,
-                        decay: 0,
-                        delay: 0,
-                        sync: false,
-                        offset: 0
-                      },
-                      s: {
-                        count: 0,
-                        enable: false,
-                        speed: 1,
-                        decay: 0,
-                        delay: 0,
-                        sync: true,
-                        offset: 0
-                      },
-                      l: {
-                        count: 0,
-                        enable: false,
-                        speed: 1,
-                        decay: 0,
-                        delay: 0,
-                        sync: true,
-                        offset: 0
-                      }
-                    }
-                  },
-                  effect: {
-                    close: true,
-                    fill: true,
-                    options: {},
-                    type: []
-                  },
-                  groups: {},
-                  move: {
-                    angle: {
-                      offset: 0,
-                      value: 90
-                    },
-                    attract: {
-                      distance: 200,
-                      enable: false,
-                      rotate: {
-                        x: 3000,
-                        y: 3000
-                      }
-                    },
-                    center: {
-                      x: 50,
-                      y: 50,
-                      mode: "percent",
-                      radius: 0
-                    },
-                    decay: 0,
-                    distance: {},
-                    direction: "none",
-                    drift: 0,
-                    enable: true,
-                    gravity: {
-                      acceleration: 9.81,
-                      enable: false,
-                      inverse: false,
-                      maxSpeed: 50
-                    },
-                    path: {
-                      clamp: true,
-                      delay: {
-                        value: 0
-                      },
-                      enable: false,
-                      options: {}
-                    },
-                    outModes: {
-                      default: "out",
-                      bottom: "out",
-                      left: "out",
-                      right: "out",
-                      top: "out"
-                    },
-                    random: false,
-                    size: false,
-                    speed: 2,
-                    spin: {
-                      acceleration: 0,
-                      enable: false
-                    },
-                    straight: false,
-                    trail: {
-                      enable: false,
-                      length: 10,
-                      fill: {}
-                    },
-                    vibrate: false,
-                    warp: false
-                  },
-                  number: {
-                    density: {
-                      enable: true,
-                      width: 1920,
-                      height: 1080
-                    },
-                    limit: {
-                      mode: "delete",
-                      value: 0
-                    },
-                    value: 100
-                  },
-                  opacity: {
-                    value: {
-                      min: 0.3,
-                      max: 0.8
-                    },
-                    animation: {
-                      count: 0,
-                      enable: true,
-                      speed: 0.5,
-                      decay: 0,
-                      delay: 0,
-                      sync: false,
-                      mode: "auto",
-                      startValue: "random",
-                      destroy: "none"
-                    }
-                  },
-                  reduceDuplicates: false,
-                  shadow: {
-                    blur: 0,
-                    color: {
-                      value: "#000"
-                    },
-                    enable: false,
-                    offset: {
-                      x: 0,
-                      y: 0
-                    }
-                  },
-                  shape: {
-                    close: true,
-                    fill: true,
-                    options: {},
-                    type: "circle"
-                  },
-                  size: {
-                    value: {
-                      min: 1,
-                      max: 3
-                    },
-                    animation: {
-                      count: 0,
-                      enable: true,
-                      speed: 3,
-                      decay: 0,
-                      delay: 0,
-                      sync: false,
-                      mode: "auto",
-                      startValue: "random",
-                      destroy: "none"
-                    }
-                  },
-                  stroke: {
-                    width: 0
-                  },
-                  zIndex: {
-                    value: 0,
-                    opacityRate: 1,
-                    sizeRate: 1,
-                    velocityRate: 1
-                  },
-                  destroy: {
-                    bounds: {},
-                    mode: "none",
-                    split: {
-                      count: 1,
-                      factor: {
-                        value: 3
-                      },
-                      rate: {
-                        value: {
-                          min: 4,
-                          max: 9
-                        }
-                      },
-                      sizeOffset: true,
-                      particles: {}
-                    }
-                  },
-                  roll: {
-                    darken: {
-                      enable: false,
-                      value: 0
-                    },
-                    enable: false,
-                    enlighten: {
-                      enable: false,
-                      value: 0
-                    },
-                    mode: "vertical",
-                    speed: 25
-                  },
-                  tilt: {
-                    value: 0,
-                    animation: {
-                      enable: false,
-                      speed: 0,
-                      decay: 0,
-                      sync: false
-                    },
-                    direction: "clockwise",
-                    enable: false
-                  },
-                  twinkle: {
-                    lines: {
-                      enable: false,
-                      frequency: 0.05,
-                      opacity: 1
-                    },
-                    particles: {
-                      enable: false,
-                      frequency: 0.05,
-                      opacity: 1
-                    }
-                  },
-                  wobble: {
-                    distance: 5,
-                    enable: false,
-                    speed: {
-                      angle: 50,
-                      move: 10
-                    }
-                  },
-                  life: {
-                    count: 0,
-                    delay: {
-                      value: 0,
-                      sync: false
-                    },
-                    duration: {
-                      value: 0,
-                      sync: false
-                    }
-                  },
-                  rotate: {
-                    value: 0,
-                    animation: {
-                      enable: false,
-                      speed: 0,
-                      decay: 0,
-                      sync: false
-                    },
-                    direction: "clockwise",
-                    path: false
-                  },
-                  orbit: {
-                    animation: {
-                      count: 0,
-                      enable: false,
-                      speed: 1,
-                      decay: 0,
-                      delay: 0,
-                      sync: false
-                    },
-                    enable: false,
-                    opacity: 1,
-                    rotation: {
-                      value: 45
-                    },
-                    width: 1
-                  },
-                  links: {
-                    blink: false,
-                    color: {
-                      value: "random"
-                    },
-                    consent: false,
-                    distance: 100,
-                    enable: true,
-                    frequency: 1,
-                    opacity: 1,
-                    shadow: {
-                      blur: 5,
-                      color: {
-                        value: "#000"
-                      },
-                      enable: false
-                    },
-                    triangles: {
-                      enable: false,
-                      frequency: 1
-                    },
-                    width: 1,
-                    warp: false
-                  },
-                  repulse: {
-                    value: 0,
-                    enabled: false,
-                    distance: 1,
-                    duration: 1,
-                    factor: 1,
-                    speed: 1
-                  }
-                },
-                pauseOnBlur: true,
-                pauseOnOutsideViewport: true,
-                responsive: [],
-                smooth: false,
-                style: {},
-                themes: [],
-                zLayers: 100,
-                emitters: [],
-                motion: {
-                  disable: false,
-                  reduce: {
-                    factor: 4,
-                    value: true
-                  }
-                }
-              }
-        }/>
-    )
-}
+import React from 'react';
+import styles from "./About.module.css";
+import Navbar from "../Navbar/Navbar"
+
+const About = () => {
+  return (
+    <>
+      <Navbar />
+      <div className={styles.about}>
+        <h2>About TechVoyage 2023</h2>
+        <p>
+          Hey, Future Tech Navigators! Embark on an exhilarating journey through
+          the vast and dynamic realm of technology with IET Cipher's flagship
+          event for first-year enthusiasts - "TechVoyage 2023: Navigating the Tech
+          Ocean." Brace yourselves for an unforgettable expedition where waves of
+          innovation, currents of knowledge, and the winds of inspiration will
+          propel you into the heart of the digital sea.
+        </p>
+        <p>
+          TechVoyage is not just an event; it's a compass for your tech journey.
+          Whether you're a coding prodigy or a curious mind eager to explore, this
+          event is your gateway to understanding the vast ocean of opportunities
+          that the tech world offers. Don't miss the chance to set sail on this
+          extraordinary adventure with IET Cipher and discover the exciting
+          horizons that await you in the boundless Tech Ocean.
+        </p>
+        <p>
+          Secure your spot now and be ready to embark on a journey that will
+          redefine your perception of technology! See you at TechVoyage 2023!
+        </p>
+        <h2>CodeQuest Chronicles</h2>
+        <p>
+          “The Ultimate Story Encoding Competition" Embark on an extraordinary
+          journey into the realms of technology and problem-solving with "CodeQuest
+          Chronicles," the ultimate story encoding competition that unfolds an
+          epic tale of challenges across diverse domains.
+        </p>
+        <p>
+          Assemble your team of intrepid coders and brace yourselves for a
+          narrative like no other. The pinnacle of CodeQuest Chronicles where all
+          the encoded solutions converge to unveil the climax of the story.
+          Decrypt the final challenge, demonstrate your mastery across domains
+          such as Capture The Flag, Cryptography, Competitive Programming, Version
+          Control Systems, ML & AI and emerge as the ultimate CodeQuest Champion.
+        </p>
+        <p>
+          This event would be conducted through a Self-Designed Website Under Our
+          Web-Team. Grading would be done as per the difficulty level of questions
+          solved (leaderboard).
+        </p>
+        <h3>Web Team</h3>
+        <ul>
+          <li>Atharv Vats</li>
+          <li>Sudeep YM</li>
+        </ul>
+      </div>
+    </>
+  );
+};
+
 export default About;

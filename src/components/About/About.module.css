@@ -1,0 +1,25 @@
+/* About.module.css */
+.about {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .about h2 {
+    color: whitesmoke;
+  }
+
+  .about p {
+    color: white;
+    line-height: 1.6;
+    height: auto;
+  }
+  .about ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .about li {
+    margin-bottom: 10px;
+    color: yellow;
+  }

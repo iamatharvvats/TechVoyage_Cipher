@@ -1,0 +1,20 @@
+/* Rules.module.css */
+.rules {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .rules h2 {
+    color:  whitesmoke;
+  }
+
+  .rules ol {
+    color: #fefae0;
+    line-height: 1.6;
+    margin-left: 20px;
+  }
+
+  .rules li {
+    margin-bottom: 10px;
+  }
