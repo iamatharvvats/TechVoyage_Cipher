@@ -1,0 +1,116 @@
+/* FAQComponent.css 
+
+.faq-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.toggle-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.faq-answer {
+  padding: 10px;
+  border: 1px solid #000;
+  border-top: 0;
+  border-radius: 0 0 5px 5px;
+  background-color: #fff;
+}
+
+.faqheader{
+    font-size: clamp(3rem,5vw,5rem);
+    text-transform: capitalize;
+    color: black;
+    animation: moveInLeft 1.5s ease-in;
+    font-family: 'GOT';
+    font-stretch: expanded;
+    letter-spacing: 10px;
+    margin-top: 0;
+    font-weight: bold;
+    font-size: 80px;
+    padding: 1px;
+    text-shadow: 1px 2px 5px bisque;
+    max-width: 800px; 
+    margin: 0 auto;
+  
+}*/
+/* FAQComponent.css */
+
+.faq-container {
+  width: 100%;
+  max-width: 600px;
+  justify-content: space-between;
+  margin-right: 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; 
+}
+
+.faq-item {
+  width: calc(50% - 10px); 
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.toggle-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.faq-answer {
+  padding: 10px;
+  border: 1px solid #000;
+  border-top: 0;
+  border-radius: 0 0 5px 5px;
+  background-color: #fff;
+}
+
+.faqheader {
+  margin-top: 60px;
+  font-size: clamp(3rem, 5vw, 5rem);
+  text-align: center; 
+  justify-content:center;
+  text-transform: capitalize;
+  color: black;
+  animation: moveInLeft 1.5s ease-in;
+  font-family: 'GOT';
+  font-stretch: expanded;
+  letter-spacing: 10px;
+  font-weight: bold;
+  font-size: 80px;
+  padding: 1px;
+  text-shadow: 1px 2px 5px bisque;
+  max-width: 800px; 
+}
