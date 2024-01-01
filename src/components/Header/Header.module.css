@@ -58,9 +58,10 @@ img {
     box-shadow: 0 0 20px rgba(205, 201, 201, 0.3);
 }*/
 .header {
-    background-image: url('./ships.webp'); /* Specify the path to your background image */
-    background-size: 100% 100%;
+    background-image: url('ships.webp'); /* Specify the path to your background image */
+    background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     height:100vh;
     color: #fff; /* Set the text color to white or any color that suits your design */
     text-align: center;
@@ -71,9 +72,9 @@ img {
   .content {
     font-size: clamp(3rem,5vw,5rem);
     text-transform: capitalize;
-    color: #fff3b0;
+    /* color: #fff3b0; */
     animation: moveInLeft 1.5s ease-in;
-    font-family: 'GOT';
+    /* font-family: 'GOT'; */
     font-stretch: expanded;
     letter-spacing: 10px;
     margin-top: 0;
@@ -81,7 +82,7 @@ img {
     text-align: center;
     font-size: 105px;
     padding: 1px;
-    text-shadow: 1px 2px 5px bisque;
+    /* text-shadow: 1px 2px 5px bisque; */
     max-width: 800px; /* Adjust the max-width to control the width of the content */
     margin: 0 auto;
   }

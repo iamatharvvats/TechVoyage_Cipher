@@ -2,6 +2,7 @@
 import React from "react";
 import styles from "./Rules.module.css"
 import Navbar from "../Navbar/Navbar";
+import Sea from "../Sea/Sea";
 
 const Rules = () => {
     return (

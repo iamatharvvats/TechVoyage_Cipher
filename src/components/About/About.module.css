@@ -1,4 +1,5 @@
 /* About.module.css */
+
 .about {
     max-width: 800px;
     margin: 0 auto;
@@ -21,5 +22,4 @@
 
   .about li {
     margin-bottom: 10px;
-    color: yellow;
   }

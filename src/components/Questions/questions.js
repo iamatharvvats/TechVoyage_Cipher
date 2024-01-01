@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-//import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import styles from './questions.module.css';
-//import Leaderboard from '../Leaderboard/Leaderboard';
 import Navbar from "../Navbar/Navbar"
 import { useParams } from 'react-router-dom';
-import { createClient } from '@supabase/supabase-js';
+import { supabase } from '../../supabaseClient';
+
 const islandImages = Array.from({ length: 25 }, (_, i) => i + 1);
-const supabase = createClient("https://psocuvldupkzajpvkgua.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBzb2N1dmxkdXBremFqcHZrZ3VhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDMxNTMzNzMsImV4cCI6MjAxODcyOTM3M30.0UdOKtQbhLJRS4avlbegV33lA5GDD8JAOBJnKBBG5w0");
+
 
 function Questions() {
   let { userId } = useParams();
@@ -141,6 +140,17 @@ function Questions() {
     setUserAnswer(e.target.value);
   };
   
+  const amplitude = 10;
+  const frequency = 2;
+  const offsetX = 10;
+  const offsetY = 0;
+
+  const calculateWavyLinePosition = (index) => {
+    const x = index * 200 + offsetX;
+    const y = amplitude * Math.sin(frequency * x) + offsetY;
+    return { x, y };
+  };
+
 
 
   return (
@@ -149,10 +159,14 @@ function Questions() {
       <header className={styles['App-header']}>
         <h1>QUESTIONS</h1>
       </header>
+      
       <div className={styles["Island-container"]}>
-        {islandImages.map((islandNumber) => (
+        {islandImages.map((islandNumber) =>{
+          const { y, x } = calculateWavyLinePosition(islandNumber);
+        return (
           <div
             key={islandNumber}
+            style={{ top: `${x}px`, left: `${y}px` }}
             className={`${styles.Island} ${islandNumber <= unlockedIsland ? styles.unlocked : styles.locked}`}
           >
             <a
@@ -190,7 +204,7 @@ function Questions() {
               </>
             )}
           </div>
-        ))}
+        )})}
       </div>
     </div>
   );

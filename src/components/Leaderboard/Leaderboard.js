@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Navbar from "../Navbar/Navbar"
 import styles from "./Leaderboard.module.css";
-import { createClient } from "@supabase/supabase-js";
+import { supabase } from '../../supabaseClient';
+import Sea from "../Sea/Sea"
 
-const supabase = createClient("https://psocuvldupkzajpvkgua.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBzb2N1dmxkdXBremFqcHZrZ3VhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDMxNTMzNzMsImV4cCI6MjAxODcyOTM3M30.0UdOKtQbhLJRS4avlbegV33lA5GDD8JAOBJnKBBG5w0");
 function ProductTable({ teamlists }) {
     return (
         <table className={`${styles.table} ${styles.container}`}>
