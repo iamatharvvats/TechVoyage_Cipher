@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate, redirect } from 'react-router-dom';
 import { supabase } from './supabaseClient';
 import FAQComponent from './components/FAQ/FAQComponent';
 import Countdown from './components/Countdown/Countdown';
@@ -15,22 +15,19 @@ import Aos from 'aos';
 import 'aos/dist/aos.css'
 import Rules from './components/Rules/Rules';
 import styles from './App.module.css';
+import { useCookies } from 'react-cookie';
 
 
 function ContestPage() {
+  const [cookies, setCookie] = useCookies(['userId']);
+  const [, removeCookie] = useCookies(['userId']);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [teamname, setteamname] = useState('')
-  // const [session, setSession] = useState(supabase.auth.getSession());
   const navigate = useNavigate();
 
   useEffect(() => {
     Aos.init({ duration: 2000 });
-    // const session = supabase.auth.getSession();
-    // setSession(session);
-    // if (session) {
-    //   console.log('User already signed in:', session.user);
-    // }
   }, []);
 
 
@@ -45,18 +42,15 @@ function ContestPage() {
         throw error;
       } else {
         console.log('Signed in:', user);
-        //const { data, error } = await supabase.auth.admin.getUserById(1)
         const { data, error } = await supabase
           .from('users')
           .select('id', 'email', 'teamname')
           .eq('email', email)
         console.log(data);
-        //.eq('leadername', teamLeaderName)
-        //.eq('leader_id', teamLeaderID);
-        //.eq('hashed_leader_id', hashedTeamID);
         if (data && data.length > 0) {
           const teamId = data[0].id
-          navigate(`/questions/${teamId}`);
+          setCookie('userId', teamId);
+          navigate('/questions');
         }
       }
     }
@@ -101,24 +95,35 @@ function ContestPage() {
       }
     } catch (error) {
       console.error('Error signing up:', error.message);
-      console.log("Already Exists")
+      alert("Already Exists")
     }
   };
 
-  
-
+  const handleSignOut = async () => {
+    try {
+      const { error } = await supabase.auth.signOut();
+      if (error) throw error;
+      // setSession(false);
+      removeCookie('userId');
+      console.log('Signed out successfully');
+      alert("You are logged out successfully.")
+      window.location.reload();
+    } catch (error) {
+      console.error('Error signing out:', error.message);
+    }
+  };
 
   const renderContent = () => {
-    // // if (session) {
-    //   return (
-    //     <div data-aos="fade-up" className={styles['login-container']}>
-    //       <h1>TechVoyage 2023 CIPHER</h1>
-    //       <h1>CODEQUEST CHRONICLES</h1>
-    //       <h2>You are already logged in. </h2>
-    //       <button onClick={handleSignOut}>Logout</button><br /><br />
-    //     </div>
-    //   );
-    // } else {
+    if (cookies.userId!=='undefined') {
+      return (
+        <div data-aos="fade-up" className={styles['login-container']}>
+          <h1>TechVoyage 2023 CIPHER</h1>
+          <h1>CODEQUEST CHRONICLES</h1>
+          <h2>You are already logged in. </h2>
+          <button onClick={handleSignOut}>Logout</button><br /><br />
+        </div>
+      );
+    } else {
       return (
         <div data-aos="fade-up" className={styles['login-container']}>
           <h1>Let the battle begin</h1>
@@ -140,6 +145,7 @@ function ContestPage() {
         </div>
       );
     }
+  }
 
   const faqs = [
     {
@@ -173,13 +179,10 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<ContestPage />} />
-        <Route path="/questions/:userId" element={<Questions />} />
-        <Route path="/question/:islandNumber" element={<Task />} />
-        <Route path="/questions/:userId/leaderboard" element={<Leaderboard />} />
+        <Route path="/questions" element={<Questions />} />
+        <Route path="/task/:islandNumber" element={<Task />} />
         <Route path="/leaderboard" element={<Leaderboard />} />
-        <Route path="/questions/:userId/about" element={<About />} />
         <Route path="/about" element={<About />} />
-        <Route path="/questions/:userId/rules" element={<Rules />} />
         <Route path="/rules" element={<Rules />} />
       </Routes>
     </Router>

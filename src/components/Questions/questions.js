@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import styles from './questions.module.css';
 import Navbar from "../Navbar/Navbar"
-import { useParams } from 'react-router-dom';
 import { supabase } from '../../supabaseClient';
+import { useCookies } from 'react-cookie';
 
 const islandImages = Array.from({ length: 25 }, (_, i) => i + 1);
 
 
 function Questions() {
-  let { userId } = useParams();
+  const [userIdCookie] = useCookies(['userId']);
+  const userId = userIdCookie.userId;
   const [userAnswer, setUserAnswer] = useState('');
   const [unlockedIsland, setUnlockedIsland] = useState(1);
   const [completedIslands, setCompletedIslands] = useState([]);
@@ -88,7 +89,7 @@ function Questions() {
     if (islandNumber <= unlockedIsland && !completedIslands.includes(islandNumber)) {
       //const questionUrl = `https://example.com/question/${islandNumber}`;
       //window.open(questionUrl, '_blank');
-      const questionUrl = `/question/${islandNumber}`;
+      const questionUrl = `/task/${islandNumber}`;
       window.open(questionUrl, '_blank');
     }
   };
