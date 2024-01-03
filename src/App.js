@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useNavigate, redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate} from 'react-router-dom';
 import { supabase } from './supabaseClient';
 import FAQComponent from './components/FAQ/FAQComponent';
 import Countdown from './components/Countdown/Countdown';
@@ -20,6 +20,7 @@ import { useCookies } from 'react-cookie';
 
 function ContestPage() {
   const [cookies, setCookie] = useCookies(['userId']);
+  
   const [, removeCookie] = useCookies(['userId']);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -28,6 +29,7 @@ function ContestPage() {
 
   useEffect(() => {
     Aos.init({ duration: 2000 });
+    setCookie('userId', cookies.userId);
   }, []);
 
 
@@ -42,7 +44,7 @@ function ContestPage() {
         throw error;
       } else {
         console.log('Signed in:', user);
-        const { data, error } = await supabase
+        const { data } = await supabase
           .from('users')
           .select('id', 'email', 'teamname')
           .eq('email', email)
@@ -114,7 +116,7 @@ function ContestPage() {
   };
 
   const renderContent = () => {
-    if (cookies.userId!=='undefined') {
+    if (cookies.userId!='undefined') {
       return (
         <div data-aos="fade-up" className={styles['login-container']}>
           <h1>TechVoyage 2023 CIPHER</h1>
