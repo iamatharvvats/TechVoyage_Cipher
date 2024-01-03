@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from "./About.module.css";
 import Navbar from "../Navbar/Navbar"
+//import Sea from "../Sea/Sea"
 
 const About = () => {
   return (

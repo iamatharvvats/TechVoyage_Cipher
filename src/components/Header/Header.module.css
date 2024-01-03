@@ -57,10 +57,71 @@ img {
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(205, 201, 201, 0.3);
 }*/
+
+/*@import url('https://fonts.googleapis.com/css2?family=Your+Unique+Font&display=swap');
+
+body {
+    font-family: Montserrat,sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    margin:0;
+}
+
+.maintext{
+        color: #b3d3f6;
+        text-align: center;
+        text-transform: capitalize;
+        font-size: clamp(2rem,3vw,3rem);
+        text-shadow: 1px 2px 5px #144d8a;
+}
+
+.lefthalf {
+    width: 35%;
+    background-color: #000;
+}
+
+.maintitle{
+    font-size: clamp(3rem,5vw,5rem);
+    text-transform: capitalize;
+    font-stretch: expanded;
+    color: #1490e4;
+    margin-top: 0;
+    font-weight: bold;
+    text-align: center;
+    height: 80px;
+    padding: 1px;
+    text-shadow: 1px 2px 5px bisque;
+}
+
+
+.righthalf {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    background-image: url('./shipsback.jpg');
+  background-size: cover;
+  
+  width: 100%;
+  height: 100%;
+  filter: grayscale(80%); 
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(205, 201, 201, 0.3);
+}*/
 .header {
-    background-image: url('./ships.webp'); /* Specify the path to your background image */
-    background-size: 100% 100%;
+    background-image: url('ships.webp'); /* Specify the path to your background image */
+    background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     height:100vh;
     color: #fff; /* Set the text color to white or any color that suits your design */
     text-align: center;
@@ -71,9 +132,9 @@ img {
   .content {
     font-size: clamp(3rem,5vw,5rem);
     text-transform: capitalize;
-    color: #fff3b0;
+    /* color: #fff3b0; */
     animation: moveInLeft 1.5s ease-in;
-    font-family: 'GOT';
+    /* font-family: 'GOT'; */
     font-stretch: expanded;
     letter-spacing: 10px;
     margin-top: 0;
@@ -81,7 +142,7 @@ img {
     text-align: center;
     font-size: 105px;
     padding: 1px;
-    text-shadow: 1px 2px 5px bisque;
+    /* text-shadow: 1px 2px 5px bisque; */
     max-width: 800px; /* Adjust the max-width to control the width of the content */
     margin: 0 auto;
   }

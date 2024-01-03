@@ -41,6 +41,7 @@ const Countdown = () => {
 
   return (
     <div>
+      <div className="countdown-heading">Countdown</div>
       <div className="countdown-container">
         <div className="countdown-item">
           <div className="countdown-number">{timeLeft.days}</div>

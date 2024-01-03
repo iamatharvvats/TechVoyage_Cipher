@@ -38,10 +38,49 @@
 /* style
 /* Navbar Styles */
 .navbar {
-  background-color: #2c3e50; /* Updated background color */
-  padding: 15px 30px; /* Increased padding for a more spacious look */
-  font-family: 'Poppins', sans-serif; /* Updated font-family */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added subtle box shadow */
+  background-color: #ecf0f1; 
+  padding: 15px 30px; 
+  font-family: 'Poppins', sans-serif; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  width:auto;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  width:100%;
+  justify-content: space-between;
+}
+
+.navbarNav {
+  list-style: none;
+  display: flex;
+  gap: 10px; 
+  margin: 0;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #2c3e50; 
+  font-weight: bold;
+  font-size: 18px; 
+  transition: color 0.3s ease, background-color 0.3s ease; 
+  padding: 10px 15px; 
+  border-radius: 5px; 
+}
+
+.navLink:hover {
+  color: #3498db; 
+  background-color: #ecf0f1; 
+  border: 2px solid #3498db; 
+  box-sizing: border-box; 
+}
+
+/*.navbar {
+  background-color: white; 
+  padding: 15px 30px; 
+  font-family: 'Poppins', sans-serif; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .container {
@@ -53,23 +92,23 @@
 .navbarNav {
   list-style: none;
   display: flex;
-  gap: 30px; /* Increased gap between navbar items */
+  gap: 30px; 
   margin: 0;
 }
 
 .navLink {
   text-decoration: none;
-  color: #ecf0f1; /* Light text color */
+  color: black; 
   font-weight: bold;
-  font-size: 18px; /* Slightly increased font size */
-  transition: color 0.3s ease, background-color 0.3s ease; /* Added background-color transition */
-  padding: 10px 15px; /* Added padding for better click/tap target */
-  border-radius: 5px; /* Added border-radius for rounded corners */
+  font-size: 18px; 
+  transition: color 0.3s ease, background-color 0.3s ease; 
+  padding: 10px 15px; 
+  border-radius: 5px; 
 }
 
 .navLink:hover {
-  color: #3498db; /* Updated text color on hover */
-  background-color: #ecf0f1; /* Background color change on hover */
-  border: 2px solid #3498db; /* Added border to create a rectangle effect */
-  box-sizing: border-box; /* Include border in box sizing */
-}
+  color: whitesmoke; 
+  background-color: purple; 
+  border: 2px solid white; 
+  box-sizing: border-box; 
+}*/

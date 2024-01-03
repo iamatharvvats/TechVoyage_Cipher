@@ -1,4 +1,6 @@
-.about {
+
+
+.about1 {
     max-width: 800px;
     margin-bottom: 150px;
     height:fit-content;
@@ -8,9 +10,8 @@
   .abcontent{
     font-size: clamp(3rem,5vw,5rem);
     text-transform: capitalize;
-    color: #472d30;
     animation: moveInLeft 1.5s ease-in;
-    font-family: 'GOT';
+    font-family: 'Creepster', cursive; /* Use the Creepster font */
     font-stretch: expanded;
     letter-spacing: 10px;
     margin-top: 0;
@@ -19,5 +20,4 @@
     padding: 1px;
     text-shadow: 1px 2px 5px bisque;
     max-width: 800px; /* Adjust the max-width to control the width of the content */
-    margin: 0 auto;
   }

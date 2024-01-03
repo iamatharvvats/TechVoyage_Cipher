@@ -15,11 +15,11 @@
     padding: 8px;
     /* background-color: #f2f2f2; */
     text-align: left;
-    color:whitesmoke;
+    color: whitesmoke;
 }
 
 .table th {
-    color:whitesmoke;
+    color: whitesmoke;
     border-bottom: 2px solid whitesmoke; /* Bold line below table headings */
 }
 
@@ -32,7 +32,7 @@
 
 /* Adjust styles for "No items to display" message */
 .table td[colSpan="3"] {
-    color:whitesmoke;
+    color: whitesmoke;
     text-align: center;
     font-style: italic;
 }
@@ -57,7 +57,7 @@
 
 /* Light lines between individual entries */
 .table tbody tr {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid whitesmoke;
 }
 
 /* Remove border-bottom for the last row */
