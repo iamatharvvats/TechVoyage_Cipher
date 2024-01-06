@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import Image from "./logo-iet.png";
-import { supabase } from "../../supabaseClient";
 import { useCookies } from 'react-cookie';
 
 export default function Navbar() {

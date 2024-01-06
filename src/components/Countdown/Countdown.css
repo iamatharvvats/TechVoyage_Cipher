@@ -1,9 +1,8 @@
 /* Countdown Styles */
 
-
   h1 {
     font-size: 36px;
-    color: #333;
+    color: whitesmoke;
     margin-bottom: 20px;
   }
   
@@ -30,7 +29,8 @@
   
   .countdown-label {
     font-size: 16px;
-    color: #555;
+    color: whitesmoke;
+    font-weight: bold;
     margin-top: 5px;
   }
   

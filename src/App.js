@@ -116,7 +116,7 @@ function ContestPage() {
   };
 
   const renderContent = () => {
-    if (cookies.userId!='undefined') {
+    if (cookies.userId!=='undefined') {
       return (
         <div data-aos="fade-up" className={styles['login-container']}>
           <h1>TechVoyage 2023 CIPHER</h1>
