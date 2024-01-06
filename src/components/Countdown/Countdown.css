@@ -34,4 +34,16 @@
     margin-top: 5px;
   }
   
+  @media only screen and (max-width: 768px) {
+    .countdown-number {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #333;
+      padding: 10px 20px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    /* Add any additional responsive styling as needed */
+  }
   

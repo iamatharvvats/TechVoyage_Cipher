@@ -16,7 +16,6 @@ const Header = () => {
         backSpeed={100}
         loop
         >
-
          </ReactTyped>
       </div>
     </header>

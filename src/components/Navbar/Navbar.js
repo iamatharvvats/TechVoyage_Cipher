@@ -30,12 +30,12 @@ export default function Navbar() {
                             </li>
                             <li className={styles.navItem}>
                                 <Link className={styles.navLink} to="/rules">
-                                    Rules and Regulations
+                                    Rules
                                 </Link>
                             </li>
                             <li className={styles.navItem}>
                                 <Link className={styles.navLink} to="/leaderboard">
-                                    Leaderboard
+                                    Leader Board
                                 </Link>
                             </li>
                         </ul>

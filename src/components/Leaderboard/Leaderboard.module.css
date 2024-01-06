@@ -64,3 +64,10 @@
 .table tbody tr:last-child {
     border-bottom: none;
 }
+
+@media only screen and (max-width: 768px) {
+    .container{
+      width: 80vw;
+    }
+    /* Add any additional responsive styling as needed */
+  }

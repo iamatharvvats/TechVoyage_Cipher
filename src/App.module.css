@@ -112,3 +112,10 @@ button:hover {
     width: 100%;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .login-container{
+    width: auto;
+  }
+  /* Add any additional responsive styling as needed */
+}

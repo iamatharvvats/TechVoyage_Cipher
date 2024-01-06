@@ -16,6 +16,8 @@
 .navbarNav {
   list-style: none;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
   margin: 0;
 }
@@ -31,4 +33,14 @@
 
 .navLink:hover {
   color: #646161;
+}
+
+@media only screen and (max-width: 768px) {
+  .container img{
+    width: 35px;
+  }
+  .container{
+    justify-content:center;
+  }
+  /* Add any additional responsive styling as needed */
 }
