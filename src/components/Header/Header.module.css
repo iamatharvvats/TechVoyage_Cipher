@@ -1,13 +1,15 @@
 
 .header {
-  background-image: url('ships.webp'); /* Specify the path to your background image */
+  border-bottom: 10px solid #5996c4;
+  background-image: url('WhatsApp\ Image\ 2024-01-08\ at\ 13.26.39_8c14d5d6.svg'); /* Specify the path to your background image */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   height:100vh;
-  color: #fff; /* Set the text color to white or any color that suits your design */
+  color: black; /* Set the text color to white or any color that suits your design */
   text-align: center;
   padding: 20px;
+  box-shadow: 10px;
 }
 
 

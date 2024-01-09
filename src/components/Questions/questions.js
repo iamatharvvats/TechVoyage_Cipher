@@ -179,13 +179,13 @@ function Questions() {
                <img src="/islands.png" alt={`Island ${islandNumber}`} className={styles['Island-img']} />
             </a>
             <div className={styles["Lock-button-container"]}>
-              <button
+              {/* <button
                 onClick={() => openQuestion(islandNumber)}
                 disabled={!completedIslands.includes(islandNumber) || islandNumber !== unlockedIsland}
                 className={`${styles['Lock-button']} ${completedIslands.includes(islandNumber) ? styles.unlocked : styles.locked}`}
               >
                 {completedIslands.includes(islandNumber) ? 'UNLOCKED' : 'LOCKED'}
-              </button>
+              </button> */}
             </div>
             {completedIslands.includes(islandNumber) ? (
               <p className={styles['Island-message']}>Task submitted!</p>

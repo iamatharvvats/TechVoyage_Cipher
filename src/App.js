@@ -16,6 +16,7 @@ import 'aos/dist/aos.css'
 import Rules from './components/Rules/Rules';
 import styles from './App.module.css';
 import { useCookies } from 'react-cookie';
+import { useLocation } from 'react-router-dom';
 
 
 function ContestPage() {
@@ -26,6 +27,20 @@ function ContestPage() {
   const [password, setPassword] = useState('');
   const [teamname, setteamname] = useState('')
   const navigate = useNavigate();
+
+  const location = useLocation();
+
+  useEffect(() => {
+    // Check for the presence of 'id' parameter in the URL
+    const { pathname, hash } = location;
+    if (pathname === '/' && hash === '#login') {
+      // Scroll to the 'login' section or handle as needed
+      const loginElement = document.getElementById('login');
+      if (loginElement) {
+        loginElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
 
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -140,9 +155,9 @@ function ContestPage() {
             <input type="text" value={email} placeholder="Team Leader Email Id" onChange={(e) => setEmail(e.target.value)} required /><br />
             <input type="password" value={password} placeholder="Password" onChange={(e) => setPassword(e.target.value)} required />
             <br />
-            <button type="button" onClick={handleSignUp}>Get Started</button>
-            <h2>If you have already enrolled for the contest kindly Login </h2>
+            <button type="button" onClick={handleSignUp}>Sign up</button>
             <button type="button" onClick={handleSignIn}>Login</button>
+            <h2>If you have already enrolled for the contest kindly login </h2>
           </form>
         </div>
       );
@@ -168,10 +183,13 @@ function ContestPage() {
       <div data-aos="fade-right" className='about'>
         <About1 />
       </div>
-      <div className={styles.container}>
+      <div className={styles.container} id='login'>
         {renderContent()}
       </div>
-      <div data-aos="fade-left"><FAQComponent faqs={faqs} /></div><Countdown /><Footer />
+      <div data-aos="fade-right" >
+        <FAQComponent faqs={faqs} />
+      </div>
+      <Countdown /><Footer />
       </>
   );
 }

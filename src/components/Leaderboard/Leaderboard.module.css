@@ -11,16 +11,16 @@
 
 .table th,
 .table td {
-    border-top: 1px solid whitesmoke; /* Add top border */
+    border-top: 1px solid black; /* Add top border */
     padding: 8px;
     /* background-color: #f2f2f2; */
     text-align: left;
-    color: whitesmoke;
+    color: black;
 }
 
 .table th {
-    color: whitesmoke;
-    border-bottom: 2px solid whitesmoke; /* Bold line below table headings */
+    color: black;
+    border-bottom: 2px solid black; /* Bold line below table headings */
 }
 
 .container {
@@ -32,7 +32,7 @@
 
 /* Adjust styles for "No items to display" message */
 .table td[colSpan="3"] {
-    color: whitesmoke;
+    color: black;
     text-align: center;
     font-style: italic;
 }
@@ -42,7 +42,7 @@
 .heading {
     margin-bottom: 20px;
     font-family: 'Roboto', Courier, monospace;
-    color: whitesmoke;
+    color: black;
 }
 
 .noItems {
@@ -57,7 +57,7 @@
 
 /* Light lines between individual entries */
 .table tbody tr {
-    border-bottom: 1px solid whitesmoke;
+    border-bottom: 1px solid black;
 }
 
 /* Remove border-bottom for the last row */

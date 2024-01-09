@@ -8,10 +8,15 @@
 }
 
 .App-header {
-  background-image: url(https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+  /* background-image: url(https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80); */
+  background-color: #6281a0;
   padding: 20px;
-  color: #fff;
+  color: white;
   font-size: 2rem;
+}
+
+.App-header h1{
+  color: white;
 }
 
 .Island-container {
@@ -117,28 +122,24 @@ button:hover {
 }
 
 @media only screen and (max-width: 768px) {
-  
-  .Lock-button-container {
-  position: relative;
-  
-}
+  .Island img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
 
-.Lock-button {
-  position: absolute;
-  top: -5px;
-  right: 5px;
-  padding: 5px 10px;
-  background-color: #ff0000;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 5px;
-}
-
-.Lock-button.unlocked {
-  background-color: #1a861a;
-}
+  .Island {
+    position: relative;
+    margin: 10px;
+    background-color: #f0e68c;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #888;
+    cursor: pointer;
+    width: 70%;
+    box-sizing: border-box;
+    overflow: hidden; 
+  }
   
   /* Add any additional responsive styling as needed */
 }

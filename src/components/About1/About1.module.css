@@ -3,12 +3,14 @@
     max-width: 800px;
     margin-bottom: 200px;
     padding: 20px;
+    margin-left: 10px;
+    height: auto;
   }
 
   .abcontent{
     font-size: clamp(3rem,5vw,5rem);
     text-transform: capitalize;
-    color: #ecf5eb;
+    color: black;
     animation: moveInLeft 1.5s ease-in;
     font-stretch: expanded;
     letter-spacing: 10px;
